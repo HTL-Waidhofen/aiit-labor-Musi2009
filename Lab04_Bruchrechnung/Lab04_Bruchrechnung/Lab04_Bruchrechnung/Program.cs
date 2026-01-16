@@ -66,6 +66,21 @@ namespace Lab04_Bruchrechnung
             this.nenner = this.nenner * b.getNenner();
             Kuerzen();
         }
+        public void Sub(Bruch b)
+        {
+            this.zaehler = this.zaehler * b.getNenner() - b.getZaehler() * this.nenner;
+            this.nenner = this.nenner * b.getNenner();
+        }
+        public void Mul(Bruch b)
+        {
+            this.zaehler = this.zaehler * b.getZaehler();
+            this.nenner = this.nenner * b.getNenner();
+        }
+        public void Div(Bruch b)
+        {
+            this.zaehler = this.zaehler * b.getNenner();
+            this.nenner = this.nenner * b.getZaehler();
+        }
 
         internal class Program
         {
